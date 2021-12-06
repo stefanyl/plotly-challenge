@@ -1,5 +1,5 @@
-
-// start with metatdata
+//use D3 library to read in samples.json
+// start with metatdata instead
 function buildMetadata(sample) {
     d3.json("samples.json").then((data) => {
       var metadata= data.metadata;
@@ -83,6 +83,7 @@ function buildMetadata(sample) {
   
   // use list of sample names to populate the select options
   d3.json("samples.json").then((data) => {
+    console.log(data)
     var sampleNames = data.names;
     sampleNames.forEach((sample) => {
       selector
